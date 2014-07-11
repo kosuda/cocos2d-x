@@ -907,6 +907,14 @@ void PhysicsWorld::update(float delta)
     }
 }
 
+void PhysicsWorld::setCollisionBias(float collisionBias)
+{
+    if (_info)
+    {
+        cpSpaceSetCollisionBias(_info->getSpace(), collisionBias);
+    }
+}
+
 PhysicsWorld::PhysicsWorld()
 : _gravity(Vec2(0.0f, -98.0f))
 , _speed(1.0f)

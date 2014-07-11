@@ -143,6 +143,8 @@ public:
     /** get the bebug draw mask */
     inline int getDebugDrawMask() { return _debugDrawMask; }
     
+    void setCollisionBias(float collisionBias);
+    
 protected:
     static PhysicsWorld* construct(Scene& scene);
     bool init(Scene& scene);
