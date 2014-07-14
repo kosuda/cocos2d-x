@@ -881,6 +881,7 @@ void PhysicsWorld::setGravity(const Vect& gravity)
 
 void PhysicsWorld::update(float delta)
 {
+    delta = 1.f / 60.f;
     while (_delayDirty)
     {
         // the updateJoints must run before the updateBodies.
